@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS MovieReddy;
+
+CREATE DATABASE MovieReddy;
