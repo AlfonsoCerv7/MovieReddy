@@ -12,7 +12,7 @@ This project was made by myself Fred Mcwilliams, Marcos Badillo, and Archita Rac
 ## Installation
 To install dependencies, run the following:
 `
-N/A, this is a deployed application.
+N/A, this is a deployed application. At this link. https://fast-temple-41402.herokuapp.com/
 `
 ## Usage
 Simply make an account and login to the website to begin, run node install in order to see code in action on your local. 
