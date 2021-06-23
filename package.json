@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
     "jaws": "^0.12.1",
+    "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
   }
 }
