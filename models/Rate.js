@@ -32,7 +32,7 @@ Rate.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "rate",
+    modelName: "rate"
   }
 );
 
