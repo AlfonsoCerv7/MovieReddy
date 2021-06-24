@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Vote } = require('../../models');
+const { User, Post, Vote } = require('../../models'); // fix vote to rate wip
 
 // get all users
 router.get('/', (req, res) => {
