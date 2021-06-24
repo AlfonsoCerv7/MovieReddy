@@ -11,6 +11,10 @@ html {
   color: #333;
 }
 
+body {
+  background-image: '../img/MovieWheel';
+}
+
 a {
   text-decoration: none;
   color: #225ca3;
