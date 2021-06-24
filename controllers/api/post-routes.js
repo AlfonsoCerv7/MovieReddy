@@ -89,7 +89,7 @@ router.post('/', (req, res) => {
 
 router.put('/upvote', (req, res) => {
     // custom static method created in models/Post.js
-    Post.upvote(req.body, { Vote })
+    Post.upvote(req.body, { Rate })
         .then(updatedPostData => res.json(updatedPostData))
         .catch(err => {
             console.log(err);
