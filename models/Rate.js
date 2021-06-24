@@ -3,8 +3,6 @@ const sequelize = require('../config/connections');
 
 class Rate extends Model {}
 
-//Rate.init({})
-
 Rate.init(
   {
     id: {
@@ -34,7 +32,7 @@ Rate.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'vote'
+    modelName: 'rate'
   }
 );
 
