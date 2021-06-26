@@ -2,8 +2,14 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+#headerCSS {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body > html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -11,8 +17,16 @@ html {
   color: #333;
 }
 
-body {
-  background-image: '../img/MovieWheel';
+body > .back-image {
+    background-image:
+        linear-gradient(to bottom, rgba(0,0,0,1), transparent),
+        url("./img/MovieWheel.jpeg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
 }
 
 a {
