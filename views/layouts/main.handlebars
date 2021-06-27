@@ -9,35 +9,45 @@
 
 <body id="back-image">
     <div class="wrapper">
-        <header class="headerCSS">
-            <h1>
-                <a href="/">MovieReddy</a>
+        {{!-- header  --}}
+        <header>
+            <h1 class="headerCSS">
+                <div>
+                    <a href="/">MovieReddy</a>
+                </div>
+                <div>
+                    <a href="./login.credentials.html">Login</a>
+                </div>
+            </h1>
+        </header>
+
+        <main>
+            <div id="websiteTitleCSS">
+                <h1>MovieReddy</h1>
+                <p>Welcome to #MovieReddy, an open source platform designed for users, by users. Login, post, comment or even leave a movie rating. With #MovieReddy,
+                    you can do just that, without the adds and cinemas telling you what to see
+                </p>
+            </div>
+            {{!-- search your genre drop down box --}}
+            <div id="websiteLinksCSS">
                 <p>Search your Movie Genre here!</p>
                 <form>
                     <select name="Genre" id="movie-genre">
                         <option value="Action">Action</option>
                         <option value="Drama">Drama</option>
-                        <option value="Horror"></option>
-                        <option value="Raunchy Comedy"></option>
-                        <option value="Comedy"></option>
-                        <option value="Romance"></option>
-                        <option value="Sci-Fi"></option>
-                        <option value="Thriller"></option>
-                        <option value="Western"></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="Horror">Horror</option>
+                        <option value="Raunchy Comedy">Raunchy Comedy</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Western">Western</option>
                     </select>
                 </form>
-                <a href="">Account Settings</a>
-            </h1>
-            
-        </header>
-        <main>
-            {{{body}}}
-            <p>This is our page!</p>
+            <div>
+            <div>
+                {{{body}}}
+            </div>
         </main>
         <footer>
             Thanks for visiting our test site!
