@@ -19,10 +19,10 @@ body > html {
   color: #333;
 }
 
-body > #back-image {
+#back-image {
     background-image:
         linear-gradient(to bottom, rgba(0,0,0,1), transparent),
-        url("./img/MovieWheel.jpeg");
+        url("/public/stylesheets/img/MovieWheel.jpeg");
     background-size: cover;
     background-position: center;
     justify-content: center;
