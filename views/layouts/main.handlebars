@@ -15,45 +15,67 @@
                 <div>
                     <a href="/">MovieReddy</a>
                 </div>
-                <div>
-                    <a href="./login.credentials.html">Login</a>
-                </div>
+                <nav>
+
+                  {{#if loggedIn}}
+       <select name="genres" id="genres" class="genre-select">
+              <option value="default" selected disabled hidden>
+                Select a Movie Genre to see reviews!
+              </option>
+              <option value="All Categories">All Genres</option>
+              <option value="Music">Action</option>
+              <option value="Pop">Drama</option>
+              <option value="Rock">Horror</option>
+              <option value="Rap">Raunchy Comedy</option>
+              <option value="Country">Comedy</option>
+              <option value="Alternative">Romance</option>
+              <option value="Classical">Sci-Fi</option>
+              <option value="Jazz">Thriller</option>
+              <option value="Sports">Western</option>
+              <option value="ArtsTheater">Family</option>
+              
+            </select>
+             <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
+          <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        
+        <select name="genres" id="genres" class="genre-select">
+              <option value="default" selected disabled hidden>
+                Select a Movie Genre to see reviews!
+              </option>
+              <option value="All Categories">All Genres</option>
+              <option value="Music">Action</option>
+              <option value="Pop">Drama</option>
+              <option value="Rock">Horror</option>
+              <option value="Rap">Raunchy Comedy</option>
+              <option value="Country">Comedy</option>
+              <option value="Alternative">Romance</option>
+              <option value="Classical">Sci-Fi</option>
+              <option value="Jazz">Thriller</option>
+              <option value="Sports">Western</option>
+              <option value="ArtsTheater">Family</option>
+              
+            </select>
+             <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
+        <a href="/login"> <button id="login" class="btn-no-style">Login</button></a>
+        
+        {{/if}}
+                </nav>
             </h1>
         </header>
 
         <main>
-            <div id="websiteTitleCSS">
-                <h1>MovieReddy</h1>
-                <p>Welcome to #MovieReddy, an open source platform designed for users, by users. Login, post, comment or even leave a movie rating. With #MovieReddy,
-                    you can do just that, without the adds and cinemas telling you what to see
-                </p>
-            </div>
-            {{!-- search your genre drop down box --}}
-            <div id="websiteLinksCSS">
-                <p>Search your Movie Genre here!</p>
-                <form>
-                    <select name="Genre" id="movie-genre">
-                        <option value="Action">Action</option>
-                        <option value="Drama">Drama</option>
-                        <option value="Horror">Horror</option>
-                        <option value="Raunchy Comedy">Raunchy Comedy</option>
-                        <option value="Comedy">Comedy</option>
-                        <option value="Romance">Romance</option>
-                        <option value="Sci-Fi">Sci-Fi</option>
-                        <option value="Thriller">Thriller</option>
-                        <option value="Western">Western</option>
-                    </select>
-                </form>
-            <div>
-            <div>
-                {{{body}}}
-            </div>
+            {{{ body }}}
+            
         </main>
         <footer>
             Thanks for visiting our test site!
         </footer>
     </div>
-<script src="/MovieReddy/controllers/api/moviedbApiFetch-routes.js"></script>
+ {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+
 </body>
 
 </html>

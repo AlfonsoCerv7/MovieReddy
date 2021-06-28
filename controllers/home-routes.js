@@ -2,6 +2,38 @@ const router = require("express").Router();
 const sequelize = require("../config/connections");
 const { Post, User, Comment } = require("../models");
 
+// get all posts for homepage
+router.get("/", (req, res) => {
+  console.log("======================");
+
+  res.render("test", { loggedOut: true });
+});
+
+// get all posts for homepage
+router.get("/login", (req, res) => {
+  console.log("======================");
+
+  res.render("login");
+});
+
+// get all posts for homepage
+router.get("/signup", (req, res) => {
+  console.log("======================");
+
+  res.render("signup");
+});
+
+// get all posts for logged in homepage
+router.get("/loggedInView", (req, res) => {
+  console.log("======================");
+  if (req.session) {
+    res.render("loggedInView", { loggedIn: true });
+  } else {
+    console.log("error");
+  }
+});
+
+/*
 router.get("/", (req, res) => {
   Post.findAll({
     attributes: [
@@ -45,5 +77,5 @@ router.get("/", (req, res) => {
 router.get('/login', (req, res) => {
   res.render('login');
 });
-
+*/
 module.exports = router;

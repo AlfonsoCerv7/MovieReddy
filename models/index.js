@@ -1,8 +1,8 @@
-const Post = require('./Post');
-const User = require('./User');
-const Rate = require('./Rate');
-const Comment = require('./Comment');
-
+//const Post = require('./Post');
+const User = require("./User");
+//const Rate = require('./Rate');
+//const Comment = require('./Comment');
+/*
 User.hasMany(Post, {
   foreignKey: 'user_id'
 });
@@ -55,4 +55,5 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
-module.exports = { User, Post, Rate, Comment }
+*/
+module.exports = { User };
