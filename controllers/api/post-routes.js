@@ -9,17 +9,18 @@ router.get("/", (req, res) => {
     order: [["created_at", "DESC"]],
     attributes: [
       "id",
-      "post_url",
+      "movie_review",
+      "star_rating",
       "title",
       "created_at",
-      [
+      /* [
         sequelize.literal(
           "(SELECT COUNT(*) FROM rate WHERE post.id = rate.post_id)"
         ),
         "rate_count",
-      ],
+      ],*/
     ],
-    include: [
+    /* include: [
       // include the Comment model here:
       {
         model: Comment,
@@ -33,8 +34,13 @@ router.get("/", (req, res) => {
         model: User,
         attributes: ["username"],
       },
-    ],
-  });
+    ],*/
+  })
+    .then((dbPostData) => res.json(dbPostData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 router.get("/:id", (req, res) => {
@@ -44,17 +50,18 @@ router.get("/:id", (req, res) => {
     },
     attributes: [
       "id",
-      "post_url",
+      "movie_review",
+      "star_rating",
       "title",
       "created_at",
-      [
-        sequelize.literal(
-          "(SELECT COUNT(*) FROM rate WHERE post.id = rate.post_id)"
-        ),
-        "rate_count",
-      ],
+      // [
+      //   sequelize.literal(
+      //     "(SELECT COUNT(*) FROM rate WHERE post.id = rate.post_id)"
+      //   ),
+      //   "rate_count",
+      // ],
     ],
-    include: [
+    /* include: [
       {
         model: Comment,
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
@@ -67,7 +74,7 @@ router.get("/:id", (req, res) => {
         model: User,
         attributes: ["username"],
       },
-    ],
+    ],*/
   })
     .then((dbPostData) => {
       if (!dbPostData) {
@@ -86,7 +93,8 @@ router.post("/", (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    movie_review: req.body.movie_review,
+    star_rating: req.body.star_rating,
     user_id: req.body.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
