@@ -1,16 +1,17 @@
-const Post = require('./Post');
-const User = require('./User');
-const Rate = require('./Rate');
-const Comment = require('./Comment');
+const Post = require("./Post");
+const User = require("./User");
+//const Rate = require('./Rate');
+//const Comment = require('./Comment');
 
 User.hasMany(Post, {
-  foreignKey: 'user_id'
+  foreignKey: "user_id",
 });
 
 Post.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: "user_id",
 });
 
+/*
 User.belongsToMany(Post, {
   through: Rate,
   as: 'rated_posts',
@@ -55,4 +56,5 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
-module.exports = { User, Post, Rate, Comment }
+*/
+module.exports = { User, Post };
