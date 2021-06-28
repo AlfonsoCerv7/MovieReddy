@@ -7,7 +7,7 @@ let userInput = '';
 
 //this first fetch gets the base_url
 //fetch('https://api.themoviedb.org/3/configuration?api_key=' + APIKey
-fetch( url + APIKey + '&query=Jack+Reacher'
+fetch( url + APIKey + '&query=Jack+Reacher' // the jack reacher query will be replaced by future user input, the fetch will run off of an event listener.
 )
 .then(function(response) {
      return response.json();
