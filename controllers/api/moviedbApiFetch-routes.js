@@ -18,7 +18,9 @@ fetch( url + APIKey + '&query=' + movieInput
    })
    .then(function(response) {
      console.log(response);
-//==============================This gets the moviedb Image=======================================================//     
+
+//=============================This gets the moviedb Image========================================================//
+
      // Use 'querySelector' to get the ID of where the moviedb image will be displayed
       var moviedbImage = document.querySelector('#moviedb-image');
  
@@ -30,9 +32,10 @@ fetch( url + APIKey + '&query=' + movieInput
      
      // Append the '<img>' element to the page
      moviedbImage.appendChild(imgEl);
+
 //================================End of the moviedb Image========================================================//
 
-//==============================This gets the movie detail =======================================================//
+//===============================This gets the movie detail ======================================================//
 
      // Use 'querySelector' to get the ID of where the movie detail will be displayed
      var movieDetail = document.querySelector('#movie-detail');
