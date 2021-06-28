@@ -6,6 +6,8 @@ const movieButton = document.getElementById("movie-button");
 movieButton.addEventListener("click", function(){
  const movieInput = document.getElementById("movie-input").value;
 
+ //create an if statement to delete imgEl (movie poster) and overviewEl (movie details) when user searches another movie title
+
 console.log('log: movieInput ', movieInput);
 
 //this will fetch the moviedb api and has the user input to ouput the movie image of their choosing
@@ -45,12 +47,7 @@ fetch( url + APIKey + '&query=' + movieInput
      movieDetail.appendChild(overviewEl);
 
 //===============================End of the movie detail =======================================================//
-
-     //this will delete the image element on the page when user decides to search another movie title
-     // while (imgEl.hasChildNodes()) {
-     //   movieButton.removeChild(imgEl.firstChild)
-     // }
-   });
+ });
 })
 
 
