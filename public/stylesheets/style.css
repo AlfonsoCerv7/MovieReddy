@@ -11,24 +11,22 @@
 }
 
 /* body */
-body > html {
+/* body > html {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
   color: #333;
-}
+} */
 
 #back-image {
-    background-image:
-        linear-gradient(to bottom, rgba(0,0,0,1), transparent),
-        url("/public/stylesheets/img/MovieWheel.jpeg");
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    background-attachment: fixed;
+  background-image: url("/public/stylesheets/img/moviereelblue.jpeg");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-attachment: fixed;
 }
 
 #websiteTitleCSS {
