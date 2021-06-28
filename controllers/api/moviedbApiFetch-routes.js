@@ -6,7 +6,9 @@ const movieButton = document.getElementById("movie-button");
 movieButton.addEventListener("click", function(){
  const movieInput = document.getElementById("movie-input").value;
 
- //create an if statement to delete imgEl (movie poster) and overviewEl (movie details) when user searches another movie title
+//create an if statement to delete imgEl (movie poster) and overviewEl (movie details) when user searches another movie title
+//
+//
 
 console.log('log: movieInput ', movieInput);
 
