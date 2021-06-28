@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 const router = require("express").Router();
-const { User, Post, Vote } = require("../../models"); // fix vote to rate wip
-=======
-const router = require('express').Router();
-const { User, Post, Rate } = require('../../models'); // fix vote to rate wip
->>>>>>> 0ef3a83324e848466121c23d9e019ef674c58417
+const { User, Post, Rate } = require("../../models"); // fix vote to rate wip
 
 // get all users
 router.get("/", (req, res) => {
@@ -18,29 +13,28 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
-    User.findOne({
-        attributes: { exclude: ['password'] },
-        where: {
-            id: req.params.id
-        },
-        include: [
-            {
-                model: Post,
-                attributes: ['id', 'title', 'post_url', 'created_at']
-            },
-            {
-                model: Post,
-                attributes: ['title'],
-                through: Rate,
-                as: 'rated_posts'
-            }
-        ]
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+router.get("/:id", (req, res) => {
+  User.findOne({
+    attributes: { exclude: ["password"] },
+    where: {
+      id: req.params.id,
+    },
+    include: [
+      {
+        model: Post,
+        attributes: ["id", "title", "post_url", "created_at"],
+      },
+      {
+        model: Post,
+        attributes: ["title"],
+        through: Rate,
+        as: "rated_posts",
+      },
+    ],
+  }).catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.post("/", (req, res) => {
