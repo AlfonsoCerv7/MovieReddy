@@ -14,7 +14,8 @@ class Post extends Model {
         },
         attributes: [
           "id",
-          "post_url",
+          "movie_review",
+          "star_rating",
           "title",
           "created_at",
           [
@@ -42,12 +43,15 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_url: {
+    movie_review: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isURL: true,
-      },
+    },
+    star_rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      is: /^[1-5]$/,
     },
     user_id: {
       type: DataTypes.INTEGER,
