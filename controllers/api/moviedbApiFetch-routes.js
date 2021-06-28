@@ -1,39 +1,57 @@
 const APIKey = '141d524e5cf007818feee1b4ecf58351';
 const url = 'https://api.themoviedb.org/3/search/movie?api_key=';
-let userInput = '';
+const movieButton = document.getElementById("movie-button");
 
-//Moviedb documentation to get image you need:
-//To build an image url I need 1)base_url 2)file_size 3)path_size
+//button click event
+movieButton.addEventListener("click", function(){
+ const movieInput = document.getElementById("movie-input").value;
 
-//this first fetch gets the base_url
-//fetch('https://api.themoviedb.org/3/configuration?api_key=' + APIKey
-fetch( url + APIKey + '&query=Jack+Reacher' // the jack reacher query will be replaced by future user input, the fetch will run off of an event listener.
+console.log('log: movieInput ', movieInput);
+
+//this will fetch the moviedb api and has the user input to ouput the movie image of their choosing
+fetch( url + APIKey + '&query=' + movieInput
 )
 .then(function(response) {
      return response.json();
    })
    .then(function(response) {
      console.log(response);
+//==============================This gets the moviedb Image=======================================================//     
      // Use 'querySelector' to get the ID of where the moviedb image will be displayed
-      var moviedbImgae = document.querySelector('#moviedb-image');
+      var moviedbImage = document.querySelector('#moviedb-image');
  
      // Create an '<img>' element
        var imgEl = document.createElement("img");
        
-     // Set that element's 'src' attribute to the 'image_url' from our moviedb API response
+     // Set that element's 'src' attribute to the 'image_url' from the moviedb API response
      imgEl.setAttribute('src',`https://image.tmdb.org/t/p/w500${response.results[0].backdrop_path}`); //get response data from console log
-     if(response.length) {
+     
+     // Append the '<img>' element to the page
+     moviedbImage.appendChild(imgEl);
+//================================End of the moviedb Image========================================================//
 
-     }
-           // Append the '<img>' element to the page
-       moviedbImgae.appendChild(imgEl);
+//==============================This gets the movie detail =======================================================//
 
+     // Use 'querySelector' to get the ID of where the movie detail will be displayed
+     var movieDetail = document.querySelector('#movie-detail');
+
+     //create an '<overview>' element
+       var overviewEl = document.createElement("overview");
+
+     // Set that element's 'src' attribute to the image_url from the moviedb API response and target the overview to display the movie details
+     overviewEl.setAttribute('src',`https://image.tmdb.org/t/p/w500${response.results[0].overview}`); //get response data from console log
+
+     //Append the '<overview>' element to the page
+     movieDetail.appendChild(overviewEl);
+
+//===============================End of the movie detail =======================================================//
+
+     //this will delete the image element on the page when user decides to search another movie title
+     // while (imgEl.hasChildNodes()) {
+     //   movieButton.removeChild(imgEl.firstChild)
+     // }
    });
-//fetch('https://api.themoviedb.org/3/movie/343611?api_key=' + APIKey + '&language=en-US'  
-//)
-//.then(function(response) {
- //return response.json();
-//})
-//.then(function(response) {
- //console.log(response);
-//}
+})
+
+
+
