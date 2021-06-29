@@ -8,17 +8,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  color: white;
 }
 
-/* body */
-body > html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  color: #333;
-}
-
+/* background image */
 #back-image {
   background-image: url("./img/MovieWheel.jpeg");
   background-size: cover;
@@ -29,8 +22,21 @@ body > html {
   background-attachment: fixed;
 }
 
+/* body */
+body > {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* color: #333; */
+}
+
 #websiteTitleCSS {
   text-align: center;
+}
+
+#websiteTitleCSS > h1 {
+  color: white;
 }
 
 a {
@@ -99,23 +105,16 @@ form label {
   flex-direction: column;
 }
 
-header {
+/* header {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
-}
+} */
 
 header h1 {
   font-size: 1em;
-}
-h1,
-p,
-a,
-button,
-label {
-  color: red;
 }
 
 main {
@@ -129,7 +128,6 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-
   font-size: 100%;
   font-weight: bold;
   transition: color 0.1s;
