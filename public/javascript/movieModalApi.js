@@ -1,8 +1,9 @@
-    $(document).ready(function () {
-        $("select").formSelect();
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
 
-document.getElementById("moreInfo") // this has to be the name of the button's id
+  document.getElementById("moreInfo") // this has to be the name of the button's id
     .addEventListener("click", function () {
         var title = document.getElementById("movie-title").value; // this needs to grab the movie's title to pass it into a var that will then be searched
         const APIKey = '141d524e5cf007818feee1b4ecf58351';
