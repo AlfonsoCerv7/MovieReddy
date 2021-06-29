@@ -5,10 +5,32 @@
     {{#each posts as |post|}}
     <li>
       {{> home-post post}}
-      <button>More Information</button>
+
+<div class="container" id="infoModal">
+                    <div id="buttonCSS">
+                        <h3 style="font-size: medium;">sample text</h3> /
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn red darken-1 modal-trigger" href="#demo-modal" id="moreInfo">More info!</a>
+                    </div>
+                    <!-- Modal Structure -->
+                    <div id="demo-modal" class="modal">
+                        <div class="modal-content">
+                            <h4 id="title"> 
+                            </h4>
+                            <h3 id="releasedate"></h3> 
+                            <div id="background"></div> 
+                            <p id="overview"></p> 
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!"
+                                class="modal-action modal-close waves-effect waves-red btn red lighten-1" id="close">Close</a>
+                        </div>
+                    </div>
+                </div>
       <!--<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>-->
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
+<script src="/javascript/movieModalApi.js"></script>
