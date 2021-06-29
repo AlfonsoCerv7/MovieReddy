@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieReddy</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body id="back-image">
+    <div class="wrapper">
+        {{!-- header  --}}
+        <header>
+            <h1 class="headerCSS">
+                <div>
+                  <!--<img src="../../public/stylesheets/img/Movie-Icon-1-460x406.png" alt=""> -->
+                    <a href="/">MovieReddy </a>
+                </div>
+                <nav>
+
+                  {{#if loggedIn}}
+                  <!--
+       <select name="genres" id="genres" class="genre-select">
+              <option value="default" selected disabled hidden>
+                Select a Movie Genre to see reviews!
+              </option>
+              <option value="All Categories">All Genres</option>
+              <option value="Music">Action</option>
+              <option value="Pop">Drama</option>
+              <option value="Rock">Horror</option>
+              <option value="Rap">Raunchy Comedy</option>
+              <option value="Country">Comedy</option>
+              <option value="Alternative">Romance</option>
+              <option value="Classical">Sci-Fi</option>
+              <option value="Jazz">Thriller</option>
+              <option value="Sports">Western</option>
+              <option value="ArtsTheater">Family</option>
+              
+            </select>
+            -->
+            <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
+             <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
+          <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <!--
+        <select name="genres" id="genres" class="genre-select">
+              <option value="default" selected disabled hidden>
+                Select a Movie Genre to see reviews!
+              </option>
+              <option value="All Categories">All Genres</option>
+              <option value="Music">Action</option>
+              <option value="Pop">Drama</option>
+              <option value="Rock">Horror</option>
+              <option value="Rap">Raunchy Comedy</option>
+              <option value="Country">Comedy</option>
+              <option value="Alternative">Romance</option>
+              <option value="Classical">Sci-Fi</option>
+              <option value="Jazz">Thriller</option>
+              <option value="Sports">Western</option>
+              <option value="ArtsTheater">Family</option>
+              
+            </select>
+            -->
+             <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
+        <a href="/login"> <button id="login" class="btn-no-style">Login</button></a>
+        
+        {{/if}}
+                </nav>
+            </h1>
+        </header>
+
+        <main>
+            {{{ body }}}
+            
+        </main>
+        <footer>
+            Thanks for visiting our test site!
+        </footer>
+    </div>
+ {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+
+</body>
+
+</html>
+<!--Marcos' index.html to call the moviedb api
+  <div class="field">
+    <input type="text" id="movie-input" placeholder="Search For Movie">
+    <button type="button" id="movie-button">Search</button>
+  </div>
+
+    <h1>This will display Moviedb Images</h1>
+    <div id="moviedb-image"></div>
+    <div id="movie-detail"></div>
+    <script src="assets/practice.js"></script>
+  </body>
