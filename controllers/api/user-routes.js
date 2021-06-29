@@ -22,14 +22,21 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "post_url", "created_at"],
+        attributes: [
+          "id",
+          "title",
+          "movie_review",
+          "star_rating",
+          "genre",
+          "created_at",
+        ],
       },
-      {
+      /* {
         model: Post,
         attributes: ["title"],
         through: Rate,
         as: "rated_posts",
-      },
+      },*/
     ],
   }).catch((err) => {
     console.log(err);

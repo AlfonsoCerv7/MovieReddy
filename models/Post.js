@@ -17,6 +17,7 @@ class Post extends Model {
           "movie_review",
           "star_rating",
           "title",
+          "genre",
           "created_at",
           [
             sequelize.literal(
@@ -50,8 +51,11 @@ Post.init(
     star_rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       is: /^[1-5]$/,
+    },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,

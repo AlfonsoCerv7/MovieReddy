@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const sequelize = require("../config/connection");
+const sequelize = require("../config/connections");
 const { Post, User, Comment, Vote } = require("../models");
 const withAuth = require("../utils/auth");
 
@@ -11,7 +11,14 @@ router.get("/", withAuth, (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    attributes: ["id", "movie_review", "star_rating", "title", "created_at"],
+    attributes: [
+      "id",
+      "movie_review",
+      "star_rating",
+      "title",
+      "genre",
+      "created_at",
+    ],
     include: [
       //   {
       //     model: Comment,
@@ -29,7 +36,51 @@ router.get("/", withAuth, (req, res) => {
   })
     .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
+      console.log("This is the posts " + posts.length);
       res.render("dashboard", { posts, loggedIn: true });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+// get all posts for dashboard
+router.get("/renderPosts", withAuth, (req, res) => {
+  console.log("here");
+  console.log(req.session);
+  console.log("======================");
+  Post.findAll({
+    where: {
+      user_id: req.session.user_id,
+    },
+    attributes: [
+      "id",
+      "movie_review",
+      "star_rating",
+      "title",
+      "genre",
+      "created_at",
+    ],
+    include: [
+      //   {
+      //     model: Comment,
+      //     attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+      //     include: {
+      //       model: User,
+      //       attributes: ["username"],
+      //     },
+      //   },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+    .then((dbPostData) => {
+      const posts = dbPostData.map((post) => post.get({ plain: true }));
+      console.log("This is the posts " + posts.length);
+      res.render("renderPosts", { posts, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
