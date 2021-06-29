@@ -7,7 +7,8 @@ movieButton.addEventListener("click", function(){
  const movieInput = document.getElementById("movie-input").value;
 
 //create an if statement to delete/remove imgEl (movie poster), overviewEl (movie details), etc when user searches another movie title
-
+//
+//
 
 console.log('log: movieInput ', movieInput);
 
@@ -63,6 +64,10 @@ fetch( url + APIKey + '&query=' + movieInput
    movieDetail.append(movieOverview);
 
 //===============================End of the movie detail ========================================================//
+
+//============================This will get the movie genre =====================================================//
+
+//================================End of the movie genre ========================================================//
  });
 })
 
