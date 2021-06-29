@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById("moreInfo") // this has to be the name of the button's id
     .addEventListener("click", function () {
-        var title = document.getElementById("movie-title").value; // this needs to grab the movie's title to pass it into a var that will then be searched
+        var title = document.getElementById("title").value; // this needs to grab the movie's title to pass it into a var that will then be searched
         const APIKey = '141d524e5cf007818feee1b4ecf58351';
         const url = 'https://api.themoviedb.org/3/search/movie?api_key=';
 
