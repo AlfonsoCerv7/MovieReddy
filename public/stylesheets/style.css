@@ -202,15 +202,6 @@ header h1 {
   font-size: 1em;
 }
 
-h1,
-p,
-a,
-button,
-label,
-#rateMovie {
-  color: red;
-}
-
 /* this targets the card */
 main {
   flex: 1;
