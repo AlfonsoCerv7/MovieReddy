@@ -58,6 +58,22 @@ a {
   font-size: 25px;
 }
 
+/*this changes the text color in the header a elements ("MovieReddy" and "Go" button) */
+.container a {
+  color: white !important;
+}
+
+/*this targets the nav bar in hearder and changes the background and added a border radius*/
+.container nav {
+  background-color: white;
+  border-radius: 15px;
+}
+
+/*this targets the a elements ("home" and "dashboard") */
+.container nav a {
+  color: blue !important;
+}
+
 /* header end */
 
 /* background image */
@@ -85,9 +101,10 @@ body > {
   color: white;
 }
 
+
 a:hover {
   background: white;
-  color: #3486eb;
+  color: white !important;
   text-shadow: none;
   border-radius: 5px, 5px;
 }
@@ -171,14 +188,14 @@ header h1 {
   font-size: 1em;
 }
 
-h1,
+/* h1,
 p,
 a,
 button,
 label,
 #rateMovie {
-  color: red;
-}
+  color: white;
+} */
 
 main {
   flex: 1;
@@ -353,12 +370,16 @@ footer {
   list-style: none;
   margin: 1em 0;
   padding: 20px 10px;
-  background: transparent; /*changed the card background */
+  background: white; /*changed the card background */
   position: relative;
   transition: 400ms;
   border-radius: 15px; /* added a border-radius to the card*/
-  border: 3px solid white; /* added a border style to the card*/
 }
+/*this targets the card li a (text color inside card)*/
+.fullclick li a {
+  color: blue !important;
+}
+
 .fullclick p a {
   color: lime;
   z-index: 2;
@@ -399,13 +420,15 @@ footer {
 }
 .fullclick li:hover,
 .fullclick li:focus-within {
-  background: white; /*changed hover background color for card*/
+  background: transparent; /*changed hover background color for card*/
   box-shadow: 0px 3px 6px #000;
+  border: 3px solid white; /* added a border style to the card*/
+  color: white !important;
 }
 ​
 /* Darker background on mouse-over */
 .btn:hover {
-  background-color: RoyalBlue;
+  background-color: royalblue;
 }
 
 .modal-content{
