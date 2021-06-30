@@ -20,14 +20,14 @@ router.get("/", withAuth, (req, res) => {
       "created_at",
     ],
     include: [
-      //   {
-      //     model: Comment,
-      //     attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-      //     include: {
-      //       model: User,
-      //       attributes: ["username"],
-      //     },
-      //   },
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
       {
         model: User,
         attributes: ["username"],
@@ -63,14 +63,14 @@ router.get("/renderPosts", withAuth, (req, res) => {
       "created_at",
     ],
     include: [
-      //   {
-      //     model: Comment,
-      //     attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-      //     include: {
-      //       model: User,
-      //       attributes: ["username"],
-      //     },
-      //   },
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
       {
         model: User,
         attributes: ["username"],
@@ -96,22 +96,22 @@ router.get("/edit/:id", withAuth, (req, res) => {
       "star_rating",
       "title",
       "created_at",
-      [
+      /*[
         sequelize.literal(
           "(SELECT COUNT(*) FROM rate WHERE post.id = rate.post_id)"
         ),
         "rate_count",
-      ],
+      ],*/
     ],
     include: [
-      //   {
-      //     model: Comment,
-      //     attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-      //     include: {
-      //       model: User,
-      //       attributes: ["username"],
-      //     },
-      //   },
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
       {
         model: User,
         attributes: ["username"],
@@ -122,7 +122,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
 
-        res.render("edit-post", {
+        res.render("editPost", {
           post,
           loggedIn: true,
         });

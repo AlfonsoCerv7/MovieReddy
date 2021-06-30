@@ -41,63 +41,33 @@
                 <div class="container" id="infoModal">
                     <!-- Modal Structure -->
                     <div id="demo-modal" class="modal">
-                        <div class="modal-content">
-                            <h4 id="title"></h4>
-                            <h3 id="releasedate"></h3> 
-                            <div id="background"></div> 
-                            <p id="overview"></p> 
+                        <div style="flex: auto;" style="border: none;"  class="modal-content">
+                            <h2 style="font-weight: bold;" id="modalTitle"> 
+                            </h2>
+                            <p style="color: white;" id="releasedate"></p> 
+                            <div class="col s6" id="background">Movie poster</div> 
+                            <p class="col s6" style="float: right;" style="font-size: medium;" id="overview"></p> 
+                            <div class="modal-footer">
+                            <a href="#!"
+                                style="float: left;" class="modal-action modal-close waves-effect waves-red btn red lighten-1" id="close">Close</a>
                         </div>
-                        <div class="modal-footer">
-                            <a href="#!" class="modal-action modal-close waves-effect waves-red btn red lighten-1" id="close">Close</a>
                         </div>
+                        
                     </div>
                 </div>
-                    {{#if loggedIn}}
-                    <!--
-                    <select name="genres" id="genres" class="genre-select">
-                    <option value="default" selected disabled hidden>
-                        Select a Movie Genre to see reviews!
-                    </option>
-                    <option value="All Categories">All Genres</option>
-                        <option value="Music">Action</option>
-                        <option value="Pop">Drama</option>
-                        <option value="Rock">Horror</option>
-                        <option value="Rap">Raunchy Comedy</option>
-                        <option value="Country">Comedy</option>
-                        <option value="Alternative">Romance</option>
-                        <option value="Classical">Sci-Fi</option>
-                        <option value="Jazz">Thriller</option>
-                        <option value="Sports">Western</option>
-                        <option value="ArtsTheater">Family</option>
-                    </select>
-                    -->
-                    <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
-                    <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
-                    <button id="logout" class="btn-no-style">Logout</button>
-                    {{else}}
-                    <!--
-                    <select name="genres" id="genres" class="genre-select">
-                        <option value="default" selected disabled hidden>
-                        Select a Movie Genre to see reviews!
-                        </option>
-                        <option value="All Categories">All Genres</option>
-                        <option value="Music">Action</option>
-                        <option value="Pop">Drama</option>
-                        <option value="Rock">Horror</option>
-                        <option value="Rap">Raunchy Comedy</option>
-                        <option value="Country">Comedy</option>
-                        <option value="Alternative">Romance</option>
-                        <option value="Classical">Sci-Fi</option>
-                        <option value="Jazz">Thriller</option>
-                        <option value="Sports">Western</option>
-                        <option value="ArtsTheater">Family</option>
-                    </select>
-                        -->
-                    </div>
-                {{/if}}
-            </nav>
-        </header>
+                <nav>
 
+                {{#if loggedIn}}
+        <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
+            <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
+        <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+            <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
+            <a href="/login"> <button id="login" class="btn-no-style">Login</button></a>
+        
+        {{/if}}
+                </nav>
+        </header>
         <main>
 
         </main>
