@@ -209,6 +209,7 @@ label,
   color: red;
 }
 
+/* this targets the card */
 main {
   flex: 1;
   padding: 2% 4%;
@@ -263,11 +264,12 @@ main {
   background-color: #1f9c13;
 }
 
-/* .comment-form {
+.comment-form {
   margin-bottom: 5%;
+  background-color: white;
 }
 
-.comment {
+/*.comment {
   padding: 1%;
   margin-bottom: 1%;
 }
