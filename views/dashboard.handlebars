@@ -14,7 +14,8 @@
       {{> post-info post}}
        <p>{{comments.length}} {{format_plural "comment" comments.length}}</p> 
      
-     <a href="/dashboard/edit/{{post.id}}" id="edit" class="btnDisplay"><button><i class="fa fa-edit"></i></button></a>
+     <a class="waves-effect waves-light btn red darken-1 modal-trigger"  href="/dashboard/edit/{{post.id}}"
+    id="edit">Edit your post!</a>
     </li>
     {{/each}}
   </ol>
