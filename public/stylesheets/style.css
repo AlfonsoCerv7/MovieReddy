@@ -9,6 +9,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   color: white;
+  border-bottom: 2px solid white;
+  width: 95%;
+  padding-bottom: 1%;
 }
 
 /* background image */
@@ -33,6 +36,7 @@ body > {
 
 #websiteTitleCSS {
   text-align: center;
+  padding-top: -2%;
 }
 
 #websiteTitleCSS > h1 {
@@ -41,9 +45,10 @@ body > {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: white;
   font-weight: bold;
   transition: color 0.1s;
+  font-size: 25px;
 }
 
 a:hover {
@@ -204,8 +209,8 @@ footer {
   display: flex;
   justify-content: center;
   padding: 1%;
-  font-size: 110%;
-  color: red;
+  font-size: 25px;
+  color: white;
 }
 .loginCSS,
 .signupCSS {
