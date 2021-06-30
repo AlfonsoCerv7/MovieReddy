@@ -22,7 +22,7 @@
                     </div>
                     <!-- Modal Trigger -->
                     <div class="col s2">
-                        <a class="waves-effect waves-light btn red darken-1 modal-trigger" style="float: left;" href="#demo-modal" id="moreInfo">Go!</a>
+                        <a class="waves-effect waves-light btn go modal-trigger" style="float: left;" href="#demo-modal" id="moreInfo">Go!</a>
                     </div>
                 </div>
                 <div class="container" id="infoModal">
@@ -46,12 +46,12 @@
                 <nav>
 
                 {{#if loggedIn}}
-        <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
-            <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
-        <button id="logout" class="btn-no-style">Logout</button>
+        <a href="/homeLogin">  <button id="dashboard" class="btn-no-style navColor">Home</button> </a>
+            <a href="/dashboard">  <button id="dashboard" class="btn-no-style navColor">Dashboard</button> </a>
+        <button id="logout" class="btn-no-style navColor">Logout</button>
     {{else}}
-            <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
-            <a href="/login"> <button id="login" class="btn-no-style">Login</button></a>
+            <a href="/signup"> <button id="signup" class="btn-no-style navColor">Sign Up</button></a>
+            <a href="/login"> <button id="login" class="btn-no-style navColor">Login</button></a>
         
         {{/if}}
                 </nav>
@@ -60,7 +60,7 @@
             {{{ body }}}
             
         </main>
-        <footer>
+        <footer style="text-align: center;">
             Thanks for visiting our test site!
         </footer>
     </div>
