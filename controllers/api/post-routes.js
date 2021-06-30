@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
       "id",
       "movie_review",
       "star_rating",
+      "genre",
       "title",
       "created_at",
       /* [
@@ -20,8 +21,9 @@ router.get("/", (req, res) => {
         "rate_count",
       ],*/
     ],
-    /* include: [
+    include: [
       // include the Comment model here:
+      /*
       {
         model: Comment,
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
@@ -30,11 +32,12 @@ router.get("/", (req, res) => {
           attributes: ["username"],
         },
       },
+      */
       {
         model: User,
         attributes: ["username"],
       },
-    ],*/
+    ],
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -52,6 +55,7 @@ router.get("/:id", (req, res) => {
       "id",
       "movie_review",
       "star_rating",
+      "genre",
       "title",
       "created_at",
       // [
@@ -61,7 +65,8 @@ router.get("/:id", (req, res) => {
       //   "rate_count",
       // ],
     ],
-    /* include: [
+    include: [
+      /*
       {
         model: Comment,
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
@@ -70,11 +75,12 @@ router.get("/:id", (req, res) => {
           attributes: ["username"],
         },
       },
+      */
       {
         model: User,
         attributes: ["username"],
       },
-    ],*/
+    ],
   })
     .then((dbPostData) => {
       if (!dbPostData) {
@@ -95,7 +101,8 @@ router.post("/", (req, res) => {
     title: req.body.title,
     movie_review: req.body.movie_review,
     star_rating: req.body.star_rating,
-    user_id: req.body.user_id,
+    genre: req.body.genre,
+    user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {

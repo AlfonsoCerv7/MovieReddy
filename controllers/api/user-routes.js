@@ -1,5 +1,5 @@
-const router = require('express').Router();
-const { User, Post, Rate } = require('../../models'); // fix vote to rate wip
+const router = require("express").Router();
+const { User, Post, Rate } = require("../../models"); // fix vote to rate wip
 
 // get all users
 router.get("/", (req, res) => {
@@ -13,29 +13,35 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
-    User.findOne({
-        attributes: { exclude: ['password'] },
-        where: {
-            id: req.params.id
-        },
-        include: [
-            {
-                model: Post,
-                attributes: ['id', 'title', 'post_url', 'created_at']
-            },
-            {
-                model: Post,
-                attributes: ['title'],
-                through: Rate,
-                as: 'rated_posts'
-            }
-        ]
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+router.get("/:id", (req, res) => {
+  User.findOne({
+    attributes: { exclude: ["password"] },
+    where: {
+      id: req.params.id,
+    },
+    include: [
+      {
+        model: Post,
+        attributes: [
+          "id",
+          "title",
+          "movie_review",
+          "star_rating",
+          "genre",
+          "created_at",
+        ],
+      },
+      /* {
+        model: Post,
+        attributes: ["title"],
+        through: Rate,
+        as: "rated_posts",
+      },*/
+    ],
+  }).catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.post("/", (req, res) => {

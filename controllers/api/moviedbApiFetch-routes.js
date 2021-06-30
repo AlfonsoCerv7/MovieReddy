@@ -24,7 +24,7 @@ fetch( url + APIKey + '&query=' + movieInput
        var imgEl = document.createElement("img");
        
      // Set that element's 'src' attribute to the 'image_url' from the moviedb API response
-     imgEl.setAttribute('src',`https://image.tmdb.org/t/p/w500${response.results[0].poster_path}`); //get response data from console log
+     imgEl.setAttribute('src',`https://image.tmdb.org/t/p/w500${response.results[0].backdrop_path}`); //get response data from console log
      
      // Append the '<img>' element to the page
      moviedbImage.appendChild(imgEl);
