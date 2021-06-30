@@ -403,3 +403,12 @@ footer {
 .btn:hover {
   background-color: RoyalBlue;
 }
+
+.modal-content{
+  border: none;
+  margin: 1px;
+}
+
+element.style {
+  margin: 1;
+}
