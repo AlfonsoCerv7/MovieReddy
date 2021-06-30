@@ -17,21 +17,20 @@ document.getElementById("reviewSubmission").addEventListener("click", async func
   var movieReview = document.getElementById("movie-review").value;
 if (movieTitle == "" || movieReview == "") {
 M.toast({ html: "Please fill in the complete form!" });
-} else{ 
-
+} else{
+  console.log("working");
 //full post syntax will go here(aka old code)
 // async function newFormHandler(event) {
-  // const star_rating = await starRating;
-  console.log("working2");
-  // event.preventDefault();
-  
+//   //const star_rating = await starRating;
+//   console.log("working2");
+//   event.preventDefault();
+  //console.log(star_rating);
   const title = document.getElementById("post-title").value; //query selector changed to getelement
-  
+  console.log(title)
   const movie_review = document.getElementById(
     'movie-review'
   ).value;
-  const star_rating = 5;
-  console.log(star_rating);
+  const star_rating = 5
   const genreSelection = document.getElementById("genres");
   const genre = genreSelection.options[genreSelection.selectedIndex].value;
   // var star_rating;
@@ -55,7 +54,9 @@ M.toast({ html: "Please fill in the complete form!" });
   // document.querySelector("#star1").addEventListener("click", function () {
   //   star_rating = 1;
   // });
-  const response = await fetch(`/api/posts`, { 
+  console.log("This is the star: " + star_rating);
+  const response = await fetch(`/api/posts`, { // await was taken away here
+    method: "POST",
     body: JSON.stringify({
       title,
       movie_review,
