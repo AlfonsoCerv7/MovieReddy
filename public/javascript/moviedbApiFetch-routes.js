@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 var main = document
    .getElementById("moreInfo") // this has to be the name of the button's id
    .addEventListener("click", function () {
-       var title = document.getElementById("movie-title").value; // this needs to grab the movie's title to pass it into a var that will then be searched
+       var title = document.getElementById("title").value; // this needs to grab the movie's title to pass it into a var that will then be searched
        const APIKey = '141d524e5cf007818feee1b4ecf58351';
        const url = 'https://api.themoviedb.org/3/search/movie?api_key=';   
 
@@ -65,5 +65,11 @@ var main = document
 
 // code for closing the modal, and clearing it. 
 document.getElementById("close").addEventListener("click", function () {
-   document.getElementById("innerModal").innerHTML = ""; 
- });
+   var moviedbImage = document.getElementById('background');
+   var movieRelease = document.getElementById('releasedate');
+   var movieDetail = document.getElementById('overview');
+   
+   moviedbImage.innerHTML="";
+   movieRelease.innerHTML="";
+   movieDetail.innerHTML="";
+});

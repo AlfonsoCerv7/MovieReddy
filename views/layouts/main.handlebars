@@ -17,17 +17,14 @@
                   <!--<img src="../../public/stylesheets/img/Movie-Icon-1-460x406.png" alt=""> -->
                     <a href="/">MovieReddy </a>
                     <div class="topnav">
-  <input type="text" placeholder="Search for a movie from imbd!">
+  <input id="title" type="text" placeholder="Search for a movie from imbd!">
                     
                     </div>
                     <!-- Modal Trigger -->
                         <a class="waves-effect waves-light btn red darken-1 modal-trigger" style="float: left;" href="#demo-modal" id="moreInfo">Go!</a>
                 </div>
                 <div class="container" id="infoModal">
-                    <div id="buttonCSS">
-                        <h3 style="font-size: medium;"></h3> 
-                        
-                    </div>
+                    
                     <!-- Modal Structure -->
                     <div id="demo-modal" class="modal">
                         <div class="modal-content">
@@ -111,18 +108,7 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/javascript/moviedbApi-Fetch-routes.js"
+    <script src="/javascript/moviedbApiFetch-routes.js"></script>
 </body>
 
 </html>
-<!--Marcos' index.html to call the moviedb api
-  <div class="field">
-    <input type="text" id="movie-input" placeholder="Search For Movie">
-    <button type="button" id="movie-button">Search</button>
-  </div>
-
-    <h1>This will display Moviedb Images</h1>
-    <div id="moviedb-image"></div>
-    <div id="movie-detail"></div>
-    <script src="assets/practice.js"></script>
-  </body>
