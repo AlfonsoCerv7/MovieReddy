@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Rate } = require("../../models"); // fix vote to rate wip
+const { User, Post, Comment, Vote } = require("../../models"); // fix vote to rate wip
 
 // get all users
 router.get("/", (req, res) => {
@@ -31,12 +31,12 @@ router.get("/:id", (req, res) => {
           "created_at",
         ],
       },
-      /* {
+      {
         model: Post,
         attributes: ["title"],
-        through: Rate,
-        as: "rated_posts",
-      },*/
+        through: Vote,
+        as: "voted_posts",
+      },
     ],
   }).catch((err) => {
     console.log(err);

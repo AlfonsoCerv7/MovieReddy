@@ -96,12 +96,12 @@ router.get("/edit/:id", withAuth, (req, res) => {
       "star_rating",
       "title",
       "created_at",
-      /*[
+      [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM rate WHERE post.id = rate.post_id)"
+          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
         ),
-        "rate_count",
-      ],*/
+        "vote_count",
+      ],
     ],
     include: [
       {
