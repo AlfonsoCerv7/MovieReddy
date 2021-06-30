@@ -5,25 +5,22 @@
     id="myBtn">Write a movie review!</a>
 </div>
 <div>
-  {{#if posts.length}}
-  <section>
-    <h2 style="color: white">Your Posts</h2>
-    <ol class="fullclick">
-      {{#each posts as |post|}}
-      <li>
-        {{> post-info post}}
-        <p>{{comments.length}} {{format_plural "comment" comments.length}}</p>
-
-        <a href="/dashboard/edit/{{post.id}}" id="edit" class="btnDisplay"><button><i
-              class="fa fa-edit"></i></button></a>
-
-
-        <!--<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>-->
-      </li>
-      {{/each}}
-    </ol>
-  </section>
-  {{/if}}
+<button id="myBtn">Write a Movie Review</button>
+{{#if posts.length}}
+<section>
+  <h2 style="color: white">Your Posts</h2>
+  <ol class="fullclick">
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+       <p>{{comments.length}} {{format_plural "comment" comments.length}}</p> 
+     
+     <a href="/dashboard/edit/{{post.id}}" id="edit" class="btnDisplay"><button><i class="fa fa-edit"></i></button></a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
 </div>
 
 <div class="container" id="myModal">
@@ -193,6 +190,7 @@
 
 
 
+<<<<<<< HEAD
   <!--
 <section>
   <h2>Create New Post</h2>
@@ -224,3 +222,5 @@
 </section>
 {{/if}}
  -->
+=======
+>>>>>>> develop
