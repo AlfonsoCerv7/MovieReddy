@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+.navColor {
+  color: white;
+}
+
+.cardStyle {
+  color: red;
+}
 
 .rate {
   /*float: left;*/
@@ -58,6 +65,12 @@ a {
   font-size: 25px;
 }
 
+.intro {
+  color: white !important;
+  font-size: x-large;
+  line-height: inherit;
+}
+
 /*this changes the text color in the header a elements ("MovieReddy" and "Go" button) */
 .container a {
   color: white !important;
@@ -101,7 +114,6 @@ body > {
   color: white;
 }
 
-
 a:hover {
   background: white;
   color: white !important;
@@ -123,7 +135,7 @@ button {
   background-color: white;
   border: 0;
   margin-bottom: 10px;
-  color: white;
+  color: red;
   font-weight: bold;
   transition: background-color 0.1s;
   cursor: pointer;
@@ -188,14 +200,14 @@ header h1 {
   font-size: 1em;
 }
 
- h1,
+h1,
 p,
 a,
 button,
 label,
 #rateMovie {
   color: red;
-} 
+}
 
 /* this targets the card */
 main {
@@ -209,7 +221,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 30px;
   font-weight: bold;
   transition: color 0.1s;
   margin-left: 16px;
@@ -245,15 +257,14 @@ main {
 }
 
 .upvote-btn {
-  background-color: #197d0f;
-  transition: background-color 0.1s;
+  transition: red 0.1s;
 }
 
 .upvote-btn:hover {
   background-color: #1f9c13;
 }
 
- .comment-form {
+.comment-form {
   margin-bottom: 5%;
   background-color: white;
 }
@@ -353,6 +364,11 @@ footer {
   justify-content: flex-start;
 }
 
+.review,
+.go {
+  background-color: red !important;
+}
+
 .btn {
   background-color: darkgrey;
   border: none;
@@ -367,6 +383,7 @@ footer {
   margin: 1em 0;
   padding: 0;
   max-width: 50em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .fullclick li {
   list-style: none;
@@ -379,7 +396,7 @@ footer {
 }
 /*this targets the card li a (text color inside card)*/
 .fullclick li a {
-  color: blue !important;
+  color: red !important;
 }
 
 .fullclick p a {
@@ -433,7 +450,7 @@ footer {
   background-color: royalblue;
 }
 
-.modal-content{
+.modal-content {
   border: none;
   margin: 1px;
 }

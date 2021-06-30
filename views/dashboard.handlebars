@@ -1,16 +1,16 @@
 <!-- Modal Trigger -->
 <div class="col s2">
   <!-- if something is broken it's this -->
-  <a class="waves-effect waves-light btn red darken-1 modal-trigger" style="float: left;" href="#test"
+  <a class="waves-effect waves-light btn  modal-trigger review" style="float: left;" href="#test"
     id="myBtn">Write a movie review!</a>
 </div>
 <div>
 {{#if posts.length}}
 <section>
   <h2 style="color: white">Your Posts</h2>
-  <ol class="fullclick">
+  <ol class="fullclick ">
     {{#each posts as |post|}}
-    <li>
+    <li cardStyle>
       {{> post-info post}}
        <p>{{comments.length}} {{format_plural "comment" comments.length}}</p> 
      
