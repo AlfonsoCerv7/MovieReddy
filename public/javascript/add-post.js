@@ -12,23 +12,26 @@ $(".modal").modal({dismissible: false});
 
 
 // code for closing the modal, and clearing it. 
-document.getElementById("post").addEventListener("click", function () {
+document.getElementById("reviewSubmission").addEventListener("click", async function () {
   var movieTitle = document.getElementById("post-title").value; // this needs to grab the movie's title to pass it into a var that will then be searched
   var movieReview = document.getElementById("movie-review").value;
-  var genres = document.getElementById("genres").value
-if (movieTitle == "" || movieReview == "" || genres == "default" ) {
+if (movieTitle == "" || movieReview == "") {
 M.toast({ html: "Please fill in the complete form!" });
-} else{
+} else{ 
+
 //full post syntax will go here(aka old code)
-async function newFormHandler(event) {
-  //const star_rating = await starRating;
-  event.preventDefault();
-  //console.log(star_rating);
-  const title = document.querySelector('input[name="post-title"]').value;
-  const movie_review = document.querySelector(
-    'input[name="movie-review"]'
+// async function newFormHandler(event) {
+  // const star_rating = await starRating;
+  console.log("working2");
+  // event.preventDefault();
+  
+  const title = document.getElementById("post-title").value; //query selector changed to getelement
+  
+  const movie_review = document.getElementById(
+    'movie-review'
   ).value;
-  const star_rating = document.querySelector('input[name="rate"]').value;
+  const star_rating = 5;
+  console.log(star_rating);
   const genreSelection = document.getElementById("genres");
   const genre = genreSelection.options[genreSelection.selectedIndex].value;
   // var star_rating;
@@ -52,9 +55,7 @@ async function newFormHandler(event) {
   // document.querySelector("#star1").addEventListener("click", function () {
   //   star_rating = 1;
   // });
-  console.log("This is the star: " + star_rating);
-  const response = await fetch(`/api/posts`, {
-    method: "POST",
+  const response = await fetch(`/api/posts`, { 
     body: JSON.stringify({
       title,
       movie_review,
@@ -71,11 +72,11 @@ async function newFormHandler(event) {
   } else {
     alert(response.statusText);
   }
-}
 
-document
-  .getElementById("reviewSubmission") // this will be changed to getelementbyid(post)
-  .addEventListener("submit", newFormHandler);
+
+// document
+//   .getElementById("reviewSubmission") // this will be changed to getelementbyid(post)
+//   .addEventListener("click", newFormHandler);
 
 
 }
