@@ -1,14 +1,14 @@
 
+<!-- Modal content -->
+<div class="container" style="background-color: white">
 
-  <!-- Modal content -->
-<div style="background-color: white">
    <form class="edit-post-form">
     <div>
-      <label for="">Movie Title</label>
+      <label style="font-size: large; font-weight:bolder;" for="">Movie Title</label>
       <input type="text" id="post-title" name="post-title" value="{{post.title}}"/>
-      <select name="genres" id="genres" class="genre-select">
+      <select name="genres" id="genres" class="genre-select class s4">
               <option value="default" selected disabled hidden>
-                Select a Movie Genre to see reviews!
+                Select your movie's genre!
               </option>
               <option value="Action">Action</option>
               <option value="Drama">Drama</option>
@@ -19,16 +19,18 @@
               <option value="Thriller">Thriller</option>
               <option value="Western">Western</option>
               <option value="Family">Family</option>
-              
+
             </select>
     </div>
-    
+
+    <div class="col s6 offset-s6">
     <div>
       <label for="movie-review">Movie Review</label>
+      <label style="font-size: large; font-weight:bolder;" for="movie-review">Movie Review</label>
       <input id="movie-review" name="movie-review"  value="{{post.movie_review}}"/>
     </div>
-    <div id="rateMovie">Rate the Movie: </div>
-    <div id="starRating"class="rate"> 
+    <div class="col s6 offset-s6" id="rateMovie">Rate the Movie: </div>
+    <div style="padding-bottom: 40px";  id="starRating"class="rate"> 
       <input type="radio" id="star5" name="rate" value="5" />
       <label for="star5" title="text">5 stars</label>
       <input type="radio" id="star4" name="rate" value="4" />
@@ -40,28 +42,56 @@
       <input type="radio" id="star1" name="rate" value="1" />
       <label for="star1" title="text">1 star</label>
     </div>
-   
-    <div id = "create">
-    <button id= "update" type="submit" class="CreateBtn">Save Updated Review</button>
-    <div>
-  </form>
-    <button type="button" class="delete-post-btn">Delete post</button>
-</div>
 
-    <form class="comment-form">
-  <div>
-    <h3>Comment:</h3>
-    <textarea name="comment-body"></textarea>
+
+    </div>
+        <form style="float: right;
+                    padding: 10px;" 
+                    class="comment-form col s8">
+                    <div style=""></div>
+  <div style="padding: auto;">
+    <p style="color: black; position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 3px;
+  margin-left: -100px;">Comment on your post:</p>
+    <textarea style="padding: 10px; margin-top: 50px;" name="comment-body"></textarea>
   </div>
 
   <div>
-    <button id= "addComment" type="submit">add comment</button>
+    <button id= "addComment" type="submit">Submit your comment!</button>
   </div>
 </form>
+    <div style="color: black;" id = "create">
+    <button style="
+                    padding: 2px;
+                    color: black;
+                    background-color: green;
+                    right: 150px;
+                    width: 100px;
+                    height: 60px;
+                    margin: 15px;
+                    margin-top: -20px;" 
+  id= "update" type="submit" class="CreateBtn col s4">Save Updated Review</button>
+    <div style="color: black; display: inline-block;
+white-space: nowrap;">
+      <button style="background-color: red;
+                    margin: 15px;
+                    color: black;
+                    right: 150px;
+                    width: 100px;
+                    height: 60px;
+                    margin-top: -20px;" type="button" class="delete-post-btn col s4 offset-s8">Delete post</button>
+  </form>
 
-<div>
+    <div style="position:inherit; margin-left: 50px margin-bottom: 100px">
 {{> comments post.comments}}
 </div>
+</div>
+
+
+
+
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
