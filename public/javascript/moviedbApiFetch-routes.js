@@ -91,8 +91,10 @@ document.getElementById("close").addEventListener("click", function () {
    var movieRelease = document.getElementById('releasedate');
    var movieDetail = document.getElementById('overview');
    var movieTitle = document.getElementById('modalTitle');
+   var movieRating = document.getElementById('rating')
    moviedbImage.innerHTML="";
    movieRelease.innerHTML="";
    movieDetail.innerHTML="";
-   movieTitle.innerHTML =""
+   movieTitle.innerHTML ="";
+   movieRating.innerHTML="";
 });
