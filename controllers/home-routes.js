@@ -8,6 +8,12 @@ router.get("/", (req, res) => {
   res.render("test", { loggedOut: true });
 });
 
+/*router.get("/edit", (req, res) => {
+  console.log("======================");
+
+  res.render("editPost");
+});*/
+
 // get all posts for homepage
 router.get("/login", (req, res) => {
   console.log("======================");
@@ -53,7 +59,7 @@ router.get("/homeLogin", (req, res) => {
     ],
     include: [
       // include the Comment model here:
-      /*
+
       {
         model: Comment,
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
@@ -62,7 +68,7 @@ router.get("/homeLogin", (req, res) => {
           attributes: ["username"],
         },
       },
-      */
+
       {
         model: User,
         attributes: ["username"],

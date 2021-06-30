@@ -2,52 +2,18 @@
   box-sizing: border-box;
 }
 
-.rate {
-  /*float: left;*/
-  height: 46px;
-  position: absolute;
-}
-.rate:not(:checked) > input {
-  position: absolute;
-  top: -9999px;
-}
-.rate:not(:checked) > label {
-  float: right;
-  width: 1em;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 30px;
-  color: #ccc;
-}
-.rate:not(:checked) > label:before {
-  content: "★ ";
-}
-.rate > input:checked ~ label {
-  color: #ffc700;
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-  color: #deb217;
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+/* header */
+#container {
+  color: #eeeeee;
 }
 
-/* header */
 .headerCSS {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   color: white;
-  border-bottom: 2px solid white;
-  width: 95%;
-  padding-bottom: 1%;
+  padding-top: 2%;
 }
 
 a {
@@ -59,6 +25,14 @@ a {
 }
 
 /* header end */
+
+/* banner CSS */
+
+#bannerCSS {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 /* background image */
 #back-image {
@@ -102,10 +76,20 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-
-button:hover {
-  /* background-color: #3486eb; */
+.comment {
+  background-color: white;
+  border: 0;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
 }
+
+/* button:hover {
+  background-color: #3486eb;
+} */
 
 .post-list {
   margin: 0;
@@ -140,6 +124,45 @@ form label {
 
 /* body end */
 
+/* rating CSS */
+
+.rate {
+  /*float: left;*/
+  height: 46px;
+  position: absolute;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/* rating CSS end */
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -161,14 +184,14 @@ header h1 {
   font-size: 1em;
 }
 
-h1,
+/* h1,
 p,
 a,
 button,
 label,
 #rateMovie {
   color: red;
-}
+} */
 
 main {
   flex: 1;
@@ -225,7 +248,7 @@ main {
   background-color: #1f9c13;
 }
 
-.comment-form {
+/* .comment-form {
   margin-bottom: 5%;
 }
 
@@ -242,7 +265,7 @@ main {
   font-size: 90%;
   margin-bottom: 0.5%;
   opacity: 0.6;
-}
+} */
 
 .new-post-form input {
   width: 300px;
@@ -396,4 +419,13 @@ footer {
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: RoyalBlue;
+}
+
+.modal-content{
+  border: none;
+  margin: 1px;
+}
+
+element.style {
+  margin: 1;
 }
