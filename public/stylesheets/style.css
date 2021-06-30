@@ -65,7 +65,7 @@ a {
 
 /*this targets the nav bar in hearder and changes the background and added a border radius*/
 .container nav {
-  background-color: white;
+  background-color: red;
   border-radius: 15px;
 }
 
@@ -188,14 +188,14 @@ header h1 {
   font-size: 1em;
 }
 
-/* h1,
+ h1,
 p,
 a,
 button,
 label,
 #rateMovie {
-  color: white;
-} */
+  color: red;
+} 
 
 main {
   flex: 1;
