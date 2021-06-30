@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connections");
 
-class Rate extends Model {}
+class Vote extends Model {}
 
-Rate.init(
+Vote.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,7 +12,6 @@ Rate.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: "user",
         key: "id",
@@ -20,7 +19,6 @@ Rate.init(
     },
     post_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: "post",
         key: "id",
@@ -32,8 +30,8 @@ Rate.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "rate"
+    modelName: "vote",
   }
 );
 
-module.exports = Rate;
+module.exports = Vote;

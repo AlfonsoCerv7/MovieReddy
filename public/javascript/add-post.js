@@ -66,7 +66,7 @@ M.toast({ html: "Please fill in the complete form!" });
     headers: {
       "Content-Type": "application/json",
     },
-  }); 
+  });
 
   if (response.ok) {
     document.location.replace("/dashboard/");
