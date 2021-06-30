@@ -332,6 +332,8 @@ footer {
   font-size: 16px;
   cursor: pointer;
 }
+
+/*this is the dashboard card*/
 .fullclick {
   margin: 1em 0;
   padding: 0;
@@ -341,9 +343,10 @@ footer {
   list-style: none;
   margin: 1em 0;
   padding: 20px 10px;
-  background: darkgrey;
+  background: lightgrey; /*changed the card background */
   position: relative;
   transition: 400ms;
+  border-radius: 15px; /* added a border-radius to the card*/
 }
 .fullclick p a {
   color: lime;
