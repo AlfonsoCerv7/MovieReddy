@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-   var elems = document.querySelectorAll('.modal');
-   var instances = M.Modal.init(elems);
+// materialize automatic select css
+$(document).ready(function () {
+   $("select").formSelect();
  });
 var main = document
    .getElementById("moreInfo") // this has to be the name of the button's id
@@ -8,8 +8,11 @@ var main = document
        var title = document.getElementById("title").value; // this needs to grab the movie's title to pass it into a var that will then be searched
        const APIKey = '141d524e5cf007818feee1b4ecf58351';
        const url = 'https://api.themoviedb.org/3/search/movie?api_key=';   
-
-       fetch( url + APIKey + '&query=' + title
+if (title == "" || url + APIKey +'&query=' + title == "null") {
+   M.toast({ html: "Please type in an exact movie title!" });
+} else{
+   $(".modal").modal();
+fetch( url + APIKey + '&query=' + title
 )
 .then(function(response) {
     return response.json();
@@ -58,9 +61,10 @@ var main = document
 
   //Append the api response overview
   movieDetail.append(movieOverview);
-
+  
 //===============================End of the movie detail ========================================================//
-});
+}); 
+}
 });
 
 // code for closing the modal, and clearing it. 

@@ -27,10 +27,13 @@
     <div>
       <label for="">Movie Title</label>
       <input type="text" id="post-title" name="post-title" />
-      <select name="genres" id="genres" class="genre-select">
-              <option value="default" selected disabled hidden>
-                Select a Movie Genre to see reviews!
-              </option>
+            <div class="row">
+            <div class="col s3">
+                <p>Select a genre!</p>
+                <!-- select a genre -->
+                <form>
+                    <div class="input-field">
+                        <select name="genres" id="genres">
               <option value="Action">Action</option>
               <option value="Drama">Drama</option>
               <option value="Horror">Horror</option>
@@ -40,8 +43,9 @@
               <option value="Thriller">Thriller</option>
               <option value="Western">Western</option>
               <option value="Family">Family</option>
-              
-            </select>
+                        </select>
+                        <label for="crypto">Movie Genre</label>
+                    </div>
     </div>
     
     <div>
