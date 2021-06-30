@@ -10,7 +10,7 @@
   <h2 style="color: white; text-align: left;">Your Posts</h2>
   <ol class="fullclick ">
     {{#each posts as |post|}}
-    <li style="margin-right: 100px;" cardStyle>
+    <li style="margin-right: 100px;" class="cardStyle">
       {{> post-info post}}
        <p>{{comments.length}} {{format_plural "comment" comments.length}}</p> 
      
