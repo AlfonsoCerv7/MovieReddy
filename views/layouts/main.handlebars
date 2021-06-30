@@ -30,8 +30,7 @@
                     <!-- Modal Structure -->
                     <div id="demo-modal" class="modal">
                         <div style="flex: auto;" style="border: none;"  class="modal-content">
-                            <h2 style="font-weight: bold;" id="modalTitle"> 
-                            </h2>
+                            <h2 style="font-weight: bold;" id="modalTitle"></h2>
                             <p style="color: white;" id="releasedate"></p> 
                             <div class="col s6" id="background">Movie poster</div> 
                             <p class="col s6" style="float: right;" style="font-size: medium;" id="overview"></p> 
@@ -44,34 +43,33 @@
                     </div>
                 </div>
                 <nav>
-
-                {{#if loggedIn}}
-        <a href="/homeLogin">  <button id="dashboard" class="btn-no-style navColor">Home</button> </a>
-            <a href="/dashboard">  <button id="dashboard" class="btn-no-style navColor">Dashboard</button> </a>
-        <button id="logout" class="btn-no-style navColor">Logout</button>
-    {{else}}
-            <a href="/signup"> <button id="signup" class="btn-no-style navColor">Sign Up</button></a>
-            <a href="/login"> <button id="login" class="btn-no-style navColor">Login</button></a>
-        
-        {{/if}}
+                    {{#if loggedIn}}
+                        <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
+                        <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
+                        <button id="logout" class="btn-no-style">Logout</button>
+                        {{else}}
+                        <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
+                        <a href="/login"> <button id="login" class="btn-no-style">Login</button></a>
+                    {{/if}}
                 </nav>
         </header>
+
         <main>
             {{{ body }}}
-            
         </main>
-        <footer style="text-align: center;">
+
+        <footer>
             Thanks for visiting our test site!
         </footer>
     </div>
- {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/javascript/moviedbApiFetch-routes.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="/javascript/moviedbApiFetch-routes.js"></script>
 </body>
 
 </html>
