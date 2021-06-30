@@ -9,9 +9,9 @@ var main = document
        const APIKey = '141d524e5cf007818feee1b4ecf58351';
        const url = 'https://api.themoviedb.org/3/search/movie?api_key=';   
 if (title == "" || url + APIKey +'&query=' + title == "null") {
-   M.toast({ html: "Please type in an exact movie title!" });
+   M.toast({ html: "Please type in a movie title!" });
 } else{
-   $(".modal").modal();
+   $(".modal").modal({dismissible: false});
 fetch( url + APIKey + '&query=' + title
 )
 .then(function(response) {
@@ -38,7 +38,7 @@ fetch( url + APIKey + '&query=' + title
 // get title//
 var movieTitle = document.getElementById('modalTitle');
 
-movieTitle.innerHTML = title;
+movieTitle.innerHTML = response.results[0].original_title;
 
 //=============================This gets the moviedb release date=================================================//
 
@@ -75,8 +75,9 @@ document.getElementById("close").addEventListener("click", function () {
    var moviedbImage = document.getElementById('background');
    var movieRelease = document.getElementById('releasedate');
    var movieDetail = document.getElementById('overview');
-   
+   var movieTitle = document.getElementById('modalTitle');
    moviedbImage.innerHTML="";
    movieRelease.innerHTML="";
    movieDetail.innerHTML="";
+   movieTitle.innerHTML =""
 });
