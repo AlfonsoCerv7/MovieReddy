@@ -1,4 +1,5 @@
 <!-- Trigger/Open The Modal -->
+<div>
 <button id="myBtn">Write a Movie Review</button>
 {{#if posts.length}}
 <section>
@@ -10,12 +11,15 @@
        <p>{{comments.length}} {{format_plural "comment" comments.length}}</p> 
      
        <a href="/dashboard/edit/{{post.id}}" id="edit" class="btnDisplay"><button><i class="fa fa-edit"></i></button></a>
+     
+      
       <!--<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>-->
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
+</div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">

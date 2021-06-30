@@ -45,13 +45,23 @@
     <button id= "update" type="submit" class="CreateBtn">Save Updated Review</button>
     <div>
   </form>
-  
+    <button type="button" class="delete-post-btn">Delete post</button>
 </div>
 
-    <div>
-     {{> comments post.comments}}
-   </div>
+    <form class="comment-form">
+  <div>
+    <h3>Comment:</h3>
+    <textarea name="comment-body"></textarea>
+  </div>
 
+  <div>
+    <button id= "addComment" type="submit">add comment</button>
+  </div>
+</form>
+
+<div>
+{{> comments post.comments}}
+</div>
 <script src="/javascript/comment.js"></script>
-
+<script src="/javascript/delete-post.js"></script>
 <script src="/javascript/edit-post.js"></script>
