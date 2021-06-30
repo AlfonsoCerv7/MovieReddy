@@ -30,12 +30,15 @@ fetch( url + APIKey + '&query=' + title
 
   // Set that element's 'src' attribute to the 'image_url' from the moviedb API response
   imgEl.setAttribute('src',`https://image.tmdb.org/t/p/w500${response.results[0].poster_path}`); //get response data from console log
-
+  imgEl.setAttribute('style','float: left;')
   // Append the '<img>' element to the page
   moviedbImage.appendChild(imgEl);
 
 //================================End of the moviedb Image========================================================//
+// get title//
+var movieTitle = document.getElementById('modalTitle');
 
+movieTitle.innerHTML = title;
 
 //=============================This gets the moviedb release date=================================================//
 
@@ -43,7 +46,7 @@ fetch( url + APIKey + '&query=' + title
   var movieRelease = document.getElementById('releasedate');
 
   //create a div element from release_date and have it appear in the index.html
-  var movieDate = document.createElement("div").innerHTML = response.results[0].release_date;
+  var movieDate = document.createElement("div").innerHTML ="Released on " + response.results[0].release_date;
 
   //Append the api response release date
   movieRelease.append(movieDate);
@@ -57,7 +60,7 @@ fetch( url + APIKey + '&query=' + title
   var movieDetail = document.getElementById('overview');
 
   //create a div element for movieOverview and have it appear in the index.html
-  var movieOverview = document.createElement("div").innerHTML = response.results[0].overview;
+  var movieOverview = document.createElement("div").innerHTML = "Movie Summary: \n " + response.results[0].overview;
 
   //Append the api response overview
   movieDetail.append(movieOverview);
