@@ -14,6 +14,16 @@
   padding-bottom: 1%;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.1s;
+  font-size: 25px;
+}
+
+/* header end */
+
 /* background image */
 #back-image {
   background-image: url("./img/MovieWheel.jpeg");
@@ -24,6 +34,7 @@
   align-items: flex-start;
   background-attachment: fixed;
 }
+/* background image end */
 
 /* body */
 body > {
@@ -31,7 +42,6 @@ body > {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  /* color: #333; */
 }
 
 #websiteTitleCSS {
@@ -39,20 +49,15 @@ body > {
   color: white;
 }
 
-#websiteTitleCSS > h1 {
+/* #websiteTitleCSS > h1 {
   color: white;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color 0.1s;
-  font-size: 25px;
-}
+} */
 
 a:hover {
+  background: white;
   color: #3486eb;
+  text-shadow: none;
+  border-radius: 5px, 5px;
 }
 
 button {
@@ -100,6 +105,8 @@ form > div {
 form label {
   display: block;
 }
+
+/* body end */
 
 .wrapper {
   width: 100%;
