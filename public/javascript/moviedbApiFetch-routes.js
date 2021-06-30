@@ -20,6 +20,20 @@ fetch( url + APIKey + '&query=' + title
   .then(function(response) {
     console.log(response);
 
+//===============================This gets the movie rating ======================================================//
+
+    //Use 'querySelector' to get the ID of where the moviedb rating will be displayed
+    var movieRating = document.getElementById('rating')
+
+    //Create a div element
+    var ratingEl = document.createElement("div").innerHTML = "Average Vote Rating Is " + response.results[0].vote_average;
+
+    //append the api respone vote_average
+    movieRating.append(ratingEl);
+
+//=================================End of the movie rating =======================================================//
+
+
 //=============================This gets the moviedb Image========================================================//
 
   // Use 'querySelector' to get the ID of where the moviedb image will be displayed
@@ -66,6 +80,7 @@ movieTitle.innerHTML = response.results[0].original_title;
   movieDetail.append(movieOverview);
   
 //===============================End of the movie detail ========================================================//
+
 }); 
 }
 });
