@@ -19,6 +19,12 @@ if (movieTitle == "" || movieReview == "") {
 M.toast({ html: "Please fill in the complete form!" });
 } else{
   console.log("working");
+//full post syntax will go here(aka old code)
+// async function newFormHandler(event) {
+//   //const star_rating = await starRating;
+//   console.log("working2");
+//   event.preventDefault();
+  //console.log(star_rating);
   const title = document.getElementById("post-title").value; //query selector changed to getelement
   console.log(title)
   const movie_review = document.getElementById(
@@ -27,6 +33,27 @@ M.toast({ html: "Please fill in the complete form!" });
   const star_rating = 5
   const genreSelection = document.getElementById("genres");
   const genre = genreSelection.options[genreSelection.selectedIndex].value;
+  // var star_rating;
+  // star_rating = document
+  //   .querySelector("#star5")
+  //   .addEventListener("click", function () {
+  //     return 5;
+  //   });
+  // star_rating = document
+  //   .querySelector("#star4")
+  //   .addEventListener("click", function () {
+  //     return 4;
+  //   });
+  // document.querySelector("#star3").addEventListener("click", function () {
+  //   star_rating = 3;
+  // });
+
+  // document.querySelector("#star2").addEventListener("click", function () {
+  //   star_rating = 2;
+  // });
+  // document.querySelector("#star1").addEventListener("click", function () {
+  //   star_rating = 1;
+  // });
   console.log("This is the star: " + star_rating);
   const response = await fetch(`/api/posts`, { // await was taken away here
     method: "POST",

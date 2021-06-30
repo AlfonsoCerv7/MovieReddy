@@ -6,6 +6,7 @@ $(document).ready(function () {
 
 document.getElementById("edit") // this has to be the name of the button's id
    .addEventListener("click", function () {
+     console.log("working")
 $(".modal").modal({dismissible: false});
 });
 
