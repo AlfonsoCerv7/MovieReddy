@@ -160,8 +160,7 @@ form label {
 header h1 {
   font-size: 1em;
 }
-<<<<<<< HEAD
-=======
+
 h1,
 p,
 a,
@@ -170,7 +169,6 @@ label,
 #rateMovie {
   color: red;
 }
->>>>>>> develop
 
 main {
   flex: 1;

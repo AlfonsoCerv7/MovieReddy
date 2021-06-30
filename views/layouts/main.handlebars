@@ -11,21 +11,19 @@
 <body id="back-image">
     <div class="wrapper">
         {{!-- header  --}}
-        <header>
-            <h1 class="headerCSS">
-                <div>
-<<<<<<< HEAD
-                    <img src="../../public/stylesheets/img/Movie-Icon-1-460x406.png" alt="">
-=======
-                  <!--<img src="../../public/stylesheets/img/Movie-Icon-1-460x406.png" alt=""> -->
->>>>>>> develop
-                    <a href="/">MovieReddy </a>
-                    <div class="topnav">
-  <input id="title" type="text" placeholder="Search for a movie from imbd!">
-                    
+        <header class="container">
+                <div class="row">
+                    <!--<img src="../../public/stylesheets/img/Movie-Icon-1-460x406.png" alt=""> -->
+                    <div class="col s4">
+                        <a href="/">MovieReddy </a>
+                    </div>
+                    <div class="col s6 topnav">
+                        <input id="title" type="text" placeholder="Search for a movie from imbd!">
                     </div>
                     <!-- Modal Trigger -->
+                    <div class="col s2">
                         <a class="waves-effect waves-light btn red darken-1 modal-trigger" style="float: left;" href="#demo-modal" id="moreInfo">Go!</a>
+                    </div>
                 </div>
                 <div class="container" id="infoModal">
                     
@@ -46,59 +44,54 @@
                 </div>
                 <nav>
 
-<<<<<<< HEAD
                 {{#if loggedIn}}
-=======
-                  {{#if loggedIn}}
-                  <!--
->>>>>>> develop
-       <select name="genres" id="genres" class="genre-select">
-              <option value="default" selected disabled hidden>
-                Select a Movie Genre to see reviews!
-              </option>
-              <option value="All Categories">All Genres</option>
-              <option value="Music">Action</option>
-              <option value="Pop">Drama</option>
-              <option value="Rock">Horror</option>
-              <option value="Rap">Raunchy Comedy</option>
-              <option value="Country">Comedy</option>
-              <option value="Alternative">Romance</option>
-              <option value="Classical">Sci-Fi</option>
-              <option value="Jazz">Thriller</option>
-              <option value="Sports">Western</option>
-              <option value="ArtsTheater">Family</option>
-              
-            </select>
-            -->
-            <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
-             <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
-          <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <!--
-        <select name="genres" id="genres" class="genre-select">
-              <option value="default" selected disabled hidden>
-                Select a Movie Genre to see reviews!
-              </option>
-              <option value="All Categories">All Genres</option>
-              <option value="Music">Action</option>
-              <option value="Pop">Drama</option>
-              <option value="Rock">Horror</option>
-              <option value="Rap">Raunchy Comedy</option>
-              <option value="Country">Comedy</option>
-              <option value="Alternative">Romance</option>
-              <option value="Classical">Sci-Fi</option>
-              <option value="Jazz">Thriller</option>
-              <option value="Sports">Western</option>
-              <option value="ArtsTheater">Family</option>
-              
-            </select>
-            -->
-             <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
+                <!--
+    <select name="genres" id="genres" class="genre-select">
+            <option value="default" selected disabled hidden>
+            Select a Movie Genre to see reviews!
+            </option>
+            <option value="All Categories">All Genres</option>
+            <option value="Music">Action</option>
+            <option value="Pop">Drama</option>
+            <option value="Rock">Horror</option>
+            <option value="Rap">Raunchy Comedy</option>
+            <option value="Country">Comedy</option>
+            <option value="Alternative">Romance</option>
+            <option value="Classical">Sci-Fi</option>
+            <option value="Jazz">Thriller</option>
+            <option value="Sports">Western</option>
+            <option value="ArtsTheater">Family</option>
+            
+        </select>
+        -->
+        <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
+            <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
+        <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <!--
+    <select name="genres" id="genres" class="genre-select">
+            <option value="default" selected disabled hidden>
+            Select a Movie Genre to see reviews!
+            </option>
+            <option value="All Categories">All Genres</option>
+            <option value="Music">Action</option>
+            <option value="Pop">Drama</option>
+            <option value="Rock">Horror</option>
+            <option value="Rap">Raunchy Comedy</option>
+            <option value="Country">Comedy</option>
+            <option value="Alternative">Romance</option>
+            <option value="Classical">Sci-Fi</option>
+            <option value="Jazz">Thriller</option>
+            <option value="Sports">Western</option>
+            <option value="ArtsTheater">Family</option>
+            
+        </select>
+        -->
+            <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
         <a href="/login"> <button id="login" class="btn-no-style">Login</button></a>
         
         {{/if}}
                 </nav>
-            </h1>
         </header>
 
         <main>
