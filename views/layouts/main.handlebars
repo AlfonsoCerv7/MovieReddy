@@ -37,7 +37,6 @@
                     {{{ body }}}
                 </div>
 
-
                 <div class="container" id="infoModal">
                     <!-- Modal Structure -->
                     <div id="demo-modal" class="modal">
@@ -55,18 +54,18 @@
                         
                     </div>
                 </div>
-                <nav>
+                
 
                 {{#if loggedIn}}
-        <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
-            <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
-        <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-            <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
-            <a href="/login"> <button id="login" class="btn-no-style">Login</button></a>
+                <a href="/homeLogin">  <button id="dashboard" class="btn-no-style">Home</button> </a>
+                <a href="/dashboard">  <button id="dashboard" class="btn-no-style">Dashboard</button> </a>
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                {{!-- <a href="/signup"> <button id="signup" class="btn-no-style">Sign Up</button></a>
+                <a href="/login"> <button id="login" class="btn-no-style">Login</button></a> --}}
         
-        {{/if}}
-                </nav>
+                {{/if}}
+            </nav>
         </header>
         <main>
 
