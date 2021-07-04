@@ -10,11 +10,10 @@
   <h2 style="color: white">Your Posts</h2>
   <ol class="fullclick ">
     {{#each posts as |post|}}
-    <li cardStyle>
+    <li class ="postCSS cardStyle">
       {{> post-info post}}
-       <p>{{comments.length}} {{format_plural "comment" comments.length}}</p> 
-     
-     <a href="/dashboard/edit/{{post.id}}" id="edit" class="btnDisplay"><button><i class="fa fa-edit"></i></button></a>
+      <p>{{comments.length}} {{format_plural "comment" comments.length}}</p> 
+      <a href="/dashboard/edit/{{post.id}}" id="edit" class="btnDisplay"><button><i class="fa fa-edit"></i></button></a>
     </li>
     {{/each}}
   </ol>
