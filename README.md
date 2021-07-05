@@ -1,29 +1,52 @@
 # MovieReddy
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-## Description
-This project was made by myself Fred Mcwilliams, Marcos Badillo, and Archita Racherla. It is a movie forum website where users can login, make posts, and comment on others posts as well as their own. 
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-## Installation
-To install dependencies, run the following:
-`
-N/A, this is a deployed application. At this link. https://immense-waters-35824.herokuapp.com/
-`
-## Usage
-Simply make an account and login to the website to begin, run node install in order to see code in action on your local. 
-## License
-This repository is licensed under the Unlicense license.
-## Contributing
-contact one of the listed collaboraters or myself. 
-## Tests
-To run tests, run the following:
-`
-N/A.
-`
-## Questions
-Questions about this repository? Please contact me at [pedrocerv1@hotmail.com](mailto:pedrocerv1@hotmail.com). View more of my work in Github [AlfonsoCerv7](https://github.com/AlfonsoCerv7) 
+
+## Purpose
+
+Tired of seeing bad movies, or don’t know what to watch?
+Well have no fear, MovieReddy is here! MovieReddy is an application designed to allow users to write movie reviews, view movie reviews and find out more information about any movie you desire! This way, you’re always be MovieReddy!
+
+MovieReddy Details:
+
+- Allows users to write, edit & delete their own movie reviews:
+  - Movie title
+  - Review
+  - Genre
+  - Star Rating
+- Allows users to see their own posts & comments through the dashboard.
+- Home page allows users:
+  - To see all user posts
+  - Comment on other user posts
+  - Upvote on other user posts
+- Search any movie and receive:
+  - Movie Title (searched)
+  - Movie Poster
+  - Movie Overview
+  - IMDb Score
+
+## Built With
+
+- moviedb-promise package
+- Materialize
+- JavaScript
+- Node.js
+- Express.js
+- Handlebars.js
+- MySQL
+- Sequelize ORM
+- express-session
+- dotenv
+- bcrypt
+- Jquery
+- AwesomefontsLibrary
+
+## Website
+
+https://immense-waters-35824.herokuapp.com/
+
+## Screenshot
+
+![](public/stylesheets/img/screenshot.JPG)
+
+## Contribution
+
+Made by the MovieReddy Team - Archita Racherla, Fred McWilliams, Marcos Badillo, & Pedro Cervantes.

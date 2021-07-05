@@ -1,8 +1,9 @@
+//Post Routes
 const router = require("express").Router();
 const sequelize = require("../../config/connections");
 const { Post, User, Vote, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
-// get all users
+// get all posts
 router.get("/", (req, res) => {
   console.log("======================");
   Post.findAll({
@@ -46,6 +47,7 @@ router.get("/", (req, res) => {
     });
 });
 
+//get one post
 router.get("/:id", (req, res) => {
   Post.findOne({
     where: {
@@ -94,8 +96,9 @@ router.get("/:id", (req, res) => {
     });
 });
 
+//post a review
 router.post("/", (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+  // expects {title: '"Titanic", movie_review:"It's a classic!". star_rating: 5, genre: "Drama", user_id: 1}
   Post.create({
     title: req.body.title,
     movie_review: req.body.movie_review,
@@ -123,6 +126,7 @@ router.put("/upvote", withAuth, (req, res) => {
     });
 });
 
+//update post
 router.put("/:id", (req, res) => {
   Post.update(
     {
@@ -150,6 +154,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
+//delete post
 router.delete("/:id", (req, res) => {
   Post.destroy({
     where: {

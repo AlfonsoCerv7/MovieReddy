@@ -88,6 +88,7 @@ router.get("/renderPosts", withAuth, (req, res) => {
     });
 });
 
+//edit post
 router.get("/edit/:id", withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [

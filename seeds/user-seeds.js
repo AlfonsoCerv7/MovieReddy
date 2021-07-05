@@ -1,6 +1,6 @@
 const sequelize = require("../config/connections");
 const { User, Post } = require("../models");
-
+//user seeds
 const userdata = [
   {
     username: "alesmonde0",

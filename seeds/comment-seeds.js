@@ -1,5 +1,5 @@
 const { Comment } = require("../models");
-
+//seed comments
 const commentdata = [
   {
     comment_text: "Nunc rhoncus dui vel sem.",

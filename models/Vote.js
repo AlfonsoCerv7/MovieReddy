@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connections");
-
+//Vote Model
 class Vote extends Model {}
 
 Vote.init(

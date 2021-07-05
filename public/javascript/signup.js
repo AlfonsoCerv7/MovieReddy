@@ -1,3 +1,4 @@
+//create a user account (signup)
 async function signupFormHandler(event) {
   event.preventDefault();
 

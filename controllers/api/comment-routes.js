@@ -1,6 +1,7 @@
+//Comment Routes
 const router = require("express").Router();
 const { Comment } = require("../../models");
-
+//get one comment
 router.get("/commentForm/:id", (req, res) => {
   res.render("renderComments", { loggedIn: true });
 });
@@ -14,6 +15,7 @@ router.get("/", (req, res) => {
     });
 });
 
+//post a comment
 router.post("/", (req, res) => {
   // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
   Comment.create({
