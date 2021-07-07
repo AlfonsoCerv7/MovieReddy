@@ -9,6 +9,25 @@ var main = document
     $(".modal").modal({ dismissible: false });
   });
 
+var star_rating;
+
+document.querySelector("#star5").addEventListener("click", function () {
+  star_rating = "5";
+});
+document.querySelector("#star4").addEventListener("click", function () {
+  star_rating = "4";
+});
+document.querySelector("#star3").addEventListener("click", function () {
+  star_rating = "3";
+});
+
+document.querySelector("#star2").addEventListener("click", function () {
+  star_rating = "2";
+});
+document.querySelector("#star1").addEventListener("click", function () {
+  star_rating = "1";
+});
+
 // code for closing the modal, and clearing it.
 document
   .getElementById("reviewSubmission")
@@ -21,7 +40,7 @@ document
       const title = document.getElementById("post-title").value;
       console.log(title);
       const movie_review = document.getElementById("movie-review").value;
-      const star_rating = 5;
+
       const genreSelection = document.getElementById("genres");
       const genre = genreSelection.options[genreSelection.selectedIndex].value;
 
